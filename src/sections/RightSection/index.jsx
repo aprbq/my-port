@@ -1,12 +1,15 @@
+import About from "../About";
+import Experince from "../Experience";
 
 const RightSection = () => {
     return (
-        <div>
-            <div>About</div>
-            <div className='mb-96'>About</div>
-            <div className='mb-96'>Experince</div>
-            <div className='mb-96'>Project</div>
-            <div className='mb-96'>Article</div>
+        <div className="grid gap-y-40 px-5">
+            <About />
+            <Experince />
+            <div>Project</div>
+            <div>Article</div>
+            <div>Article</div>
+            <div>Article</div>
         </div>
     )
 }
