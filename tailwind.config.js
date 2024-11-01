@@ -11,7 +11,7 @@ export default {
         primaryContent: "#697565", // เพิ่ม # ก่อนค่า HEX
         primarySubContent: "#3C3D37", // เพิ่ม # ก่อนค่า HEX
         primaryBg: "#ECDFCC", // เพิ่ม # ก่อนค่า HEX
-        primaryProject: "#D4C3B2", // เพิ่ม # ก่อนค่า HEX
+        primaryProject: "#e3d0bd", // เพิ่ม # ก่อนค่า HEX
         
       }
     },

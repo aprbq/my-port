@@ -10,9 +10,9 @@ const Header = () =>{
             <div className='text-sm w-5/6'>{data.caption}</div>
             <div className='mt-4'>
                 <a href={data.link} target='_blank'>
-                    <span className='rounded-md bg-primaryTitle text-gray-100 py-2 px-4'>
+                    <span className='rounded-md bg-primaryTitle text-gray-100 py-2 px-4 hover:text-primaryProject'>
                         View Resume
-                        <span className='rotate-90 inline-block ml-2'> <FontAwesomeIcon className='animate-bounce' icon={faArrowDown} /></span>
+                        <span className='rotate-90 inline-block ml-2 hover:text-primaryProject'> <FontAwesomeIcon className='animate-bounce' icon={faArrowDown} /></span>
                     </span>
                 </a>
             </div>
