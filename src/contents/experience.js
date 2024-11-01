@@ -34,5 +34,20 @@ export const data = [
             ["C/C++"]
         ],
         picture: picExp1,
+    },
+    {
+        date: "Aug 2024",
+        title: "Data Structure & Algorithms",
+        link: "https://github.com/aprbq/SA-G08",
+        materials: [
+            {type: faGithub, link:"https://github.com/aprbq"},
+        ],
+        descriptions: [
+            "A simple and minimalist for Dijkstra Algorithm built with C/C++."
+        ],
+        skills: [
+            ["C/C++"]
+        ],
+        picture: picExp1,
     }
 ];

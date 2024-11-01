@@ -14,7 +14,7 @@ const ContentContainer = ({
     const SECTION_ID = `${sectionTitle}-section`
 
     return (
-        <div id={SECTION_ID}>
+        <div id={SECTION_ID} className="scroll-m-12">
             <div className="text-primaryTitle font-medium px-2">{sectionTitle}</div>
             {
                 data.map(({
