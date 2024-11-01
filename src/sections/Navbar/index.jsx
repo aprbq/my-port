@@ -2,23 +2,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-const navs = [
-    {title:"About", sectionId:"About-section"},
-    {title:"Experience", sectionId:"Experience-section"},
-    {title:"Project", sectionId:"Project-section"},
-    {title:"Article", sectionId:"Article-section"},
-]
-const Navbar = () => {
+const Navbar = ({ navBarItems, currentSection }) => {
     
     const [isMouseEnter, setIsMouseEnter] = useState({});
     const handleClick = (sectionId) => {
-        console.log(sectionId);
         document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
     }
+
     return (
-        <div className='flex flex-col gap-3 font-semibold'>
+        <div className='hidden lg:flex flex-col gap-3 font-semibold mt-7'>
             {
-                navs.map((e, i) => (
+                navBarItems.map((e, i) => (
                     <div 
                         key={`nav-${e}-${i}`}
                         onClick={() => handleClick(e.sectionId)}
@@ -27,10 +21,13 @@ const Navbar = () => {
                         className="cursor-pointer flex"
                     >
                         <div>
-                            <FontAwesomeIcon className={`mr-2 text-primaryTitle new-arrow ${isMouseEnter[e.title] ? "":"hidden"}`} icon={faArrowRight}/>
+                            <FontAwesomeIcon 
+                                
+                                className={`new-arrow ${currentSection === e.sectionId ? "text-primaryContent": isMouseEnter[e.title] ? "" : "hidden"}`} icon={faArrowRight}
+                            />
                         </div>
                         
-                        <div className={`${isMouseEnter[e.title] ? "translate-x-1":""} duration-500 ease-out`}>{e.title}</div>
+                        <div className={`${currentSection === e.sectionId || isMouseEnter[e.title] ? "translate-x-3":""} duration-500 ease-out`}>{e.title}</div>
                     </div>
                 ))
             }

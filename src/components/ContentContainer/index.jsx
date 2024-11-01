@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormattedDate from "../FormattedDate";
 import Picture from "../Picture";
 import TitleLink from "../TitleLink";
@@ -7,12 +7,16 @@ import Description from "../Description";
 import Tech from "../Tech";
 
 const ContentContainer = ({
+    onInitial,
     title: sectionTitle = "",
     data = [],
 }) => {
     const [mouseEnter, setMouseEnter] = useState({});
     const SECTION_ID = `${sectionTitle}-section`
 
+    useEffect(() => {
+        onInitial(SECTION_ID);
+    }, [])
     return (
         <div id={SECTION_ID} className="scroll-m-12">
             <div className="text-primaryTitle font-medium px-2">{sectionTitle}</div>
